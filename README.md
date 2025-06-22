@@ -1,64 +1,134 @@
-# 🛍️ E-Commerce Sales & Call Center Data Analysis
+# 📞 E-Commerce Call Center & Sales Performance Dashboard
 
-This project aims to analyze data related to an e-commerce call center and sales performance, in order to support decision-making, improve customer interactions, and boost sales efficiency.
-
-## 📌 Project Objective
-
-Analyze operational data from a sales call center to:
-- Improve call center performance
-- Identify sales opportunities
-- Provide actionable recommendations to business owners
-
-## 🧮 Tools Used
-- Power BI for interactive dashboards
-- Excel (Pivot Tables) for initial data exploration
-- SQL for data filtering (optional if needed)
-
-## 📊 Key Analytical Questions
-
-### For Business Decision Making:
-- What are the top-selling products by city?
-- Who are the top-performing sales representatives?
-- Which stores have the highest approval rates?
-- What is the average price of approved products?
-- Is there a relationship between response time and deal approval?
-- Which products get rejected frequently?
-- What are the peak days/times for approvals?
-
-### For Call Center Agents:
-- What is the average number of calls before approval?
-- Which customers were contacted multiple times with no success?
-- Which cities have the highest rejection rates and why?
-- What are the common rejection reasons?
-- Is there a link between store manager and order success?
-- Are there visual or product patterns for approvals?
-
-### General Performance Metrics:
-- Overall approval rate
-- Performance comparison between cities
-- Does product name/type affect client decision?
-
-## 📈 Example Insight
-
-If customers from **Cairo** tend to approve more orders when response time is within **5 minutes**, then:
-- Prioritize quick response in Cairo
-- Automate replies for faster engagement
-
-## ✅ Recommendations
-
-Based on the above questions and structure, we recommend the following:
-- Create a Power BI Dashboard answering these key questions
-- Focus on response time as a key performance metric
-- Identify top-performing products and agents per region
-- Track rejection reasons and train the call center team accordingly
-- Monitor customer interactions with more than 3 attempts for follow-up
-
-## 🚀 Next Steps
-
-1. **Data Cleaning**: Ensure response time is in correct format, unify status labels, and handle missing data.
-2. **Dashboard Design**: Visualize key KPIs such as approvals, top products, cities, and agents.
-3. **Insight Documentation**: Provide a business report in PDF summarizing findings and recommendations.
+This project presents a full Power BI analysis of call center performance, product orders, employee activity, and client behavior for an e-commerce business.
 
 ---
 
-> Need help building the Power BI dashboard or PDF summary? Let's collaborate! 💡
+## 🎯 Objective
+
+To help the business:
+- Improve call center responsiveness
+- Understand customer behavior by product, city, and time
+- Increase order approval rates
+- Support better decision-making through actionable insights
+
+---
+
+## 📊 Key KPIs Visualized
+
+- ✅ Total Orders: **1,369**
+- 🧑‍🤝‍🧑 Total Customers: **471**
+- 📍 Cities: **78**
+- 📦 Orders Under Review: **705**
+- ❌ Rejected Orders: **270**
+- 💰 Avg. Product Price: **167 EGP**
+- 🏆 Top Store: **Ibn Al-Bitar 1**
+- 🛍️ Best-Selling Product: **BeeFirm**
+- 🚫 Most Rejected Product: **BeeFirm Marhaba**
+
+---
+
+## 🔍 Main Dashboard Sections
+
+### 1. **Sales Insights**
+- Best and worst selling products
+- Most rejected products
+- Approval/rejection rates
+
+### 2. **City-Based Analysis**
+- Order distribution by customer city
+- Approval rate per city
+
+### 3. **Call Center Agent Performance**
+- Number of orders handled per agent
+- Call response rate per hour
+- Avg. number of contact attempts
+
+### 4. **Time-Based Patterns**
+- Hourly performance chart
+- Employee effectiveness by time of day
+
+---
+
+## 🛠️ Recommendations for Improvement
+
+### ✅ 1. Data Accuracy & Tracking
+- Many **unclassified city values** skew the analysis → ensure data validation.
+- Retain **all contact attempts**, not just the last one, to better measure effort.
+- Raise **data awareness** within the team: accurate inputs = smarter decisions.
+
+### ✅ 2. Add Analytical Columns
+- `Response Time` = Time of answer - Time of call  
+- `# of Contact Attempts`  
+- `Rejection Reason` (if collected)  
+- `Targeted Product` for personalized marketing
+
+### ✅ 3. Team Development
+- Track top-performing agents
+- Offer **training** based on proven techniques
+
+### ✅ 4. Time-Based Strategy
+- Since data is from a single day, analyze **by hour**
+- Identify hot hours for approvals
+
+### ✅ 5. Visual Strategy by City/Product
+- Use **stacked column charts**:
+  - X-axis: City
+  - Legend: Product Name
+  - Value: Number of Approvals
+- 🧠 Insight: "Product X sells more in Benghazi, Y in Sabratha → stock accordingly."
+
+### ✅ 6. Standardize Status Mapping
+
+| Raw Status               | Final Classification |
+|--------------------------|----------------------|
+| استلم / رد ويستلم         | ✅ Approved          |
+| رفض الاستلام / مغلق / ألغى / مش طالب | ❌ Rejected |
+| لم يرد                    | 📞 No Answer         |
+| أجل الاستلام             | ⏳ Delayed           |
+| Other                    | Uncategorized        |
+
+---
+
+## ✅ Additional Key Recommendations (from Real Case Review)
+
+1. **Log All Contact Attempts**
+   - Keep a full history of contact attempts, not just the latest one.
+   - This allows a more accurate understanding of how many follow-ups were needed and improves analysis of agent effort.
+
+2. **Add Analytical Columns to Enhance Insights**
+   - `Response Duration` = Response Time – Call Time  
+   - `Number of Contact Attempts`  
+   - `Rejection Reason` (if available)  
+   - `Targeted Product` – helps align offers to customer interests and optimize marketing.
+
+3. **Handle Unclassified City Data**
+   - A large number of "Unclassified" cities reduces the reliability of geographic insights and creates outliers.
+   - Input validation and standardized entry are strongly recommended.
+
+4. **Support Underperforming Employees**
+   - Monitor top-performing agents, learn from their communication style, and offer practical training to those with lower approval rates.
+
+5. **Time-Based Analysis for a Single Day**
+   - Since the dataset covers one day, break down performance by hour to discover high-response time slots.
+
+6. **Organize the Dashboard into Separate Views**
+   - Create separate sheets or dashboards for:
+     - Sales overview  
+     - Employee performance  
+     - Order status analysis  
+   - This improves clarity and helps focus analysis.
+
+7. **Raise Team Awareness about Data Quality**
+   - Emphasize that accurate data entry isn't just a routine task — it directly impacts decision-making and overall team performance.
+
+---
+
+## 📎 File Structure
+
+```plaintext
+📁 Dataset (if public)
+📄 ilovepdf_merged.pdf → Power BI Dashboard Screenshots
+📄 Presentation.pdf → Summary of insights and visuals
+📄 README.md → This file
+💡 Developed by: Hasnaa Ahmed – Data Analyst
